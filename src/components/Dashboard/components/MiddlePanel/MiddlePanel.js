@@ -24,7 +24,14 @@ function MiddlePanel() {
     console.log("Amount::", amount);
     console.log("expenseType", expenseType);
     let obj = { ...dashData };
-    if (Number(amount) > 0) {
+    if((selectedFriends.length==0 && Number(amount) == 0)){
+      alert('Please Enter amount and Select Friend!!');
+      return;
+    }else if((selectedFriends.length==0 && Number(amount) > 0)){
+      alert('Please Select Friend!!');
+      return;
+    }
+    else if (Number(amount) > 0 && selectedFriends.length>0) {
       if (expenseType == -1 || expenseType == 0) {
         let amo =
           Math.round((Number(amount) / (selectedFriends?.length + 1)) * 100) /
@@ -78,7 +85,6 @@ function MiddlePanel() {
             <div class="actions">
               <a
                 class="btn btn-large btn-orange"
-                href="#add_bill"
                 onClick={() => {
                   setAmount(0);
                   setIsModalOpen(true);
@@ -86,9 +92,6 @@ function MiddlePanel() {
                 }}
               >
                 Add an expense
-              </a>
-              <a class="btn btn-large btn-mint" href="#settle_up_form">
-                Settle up
               </a>
             </div>
           </div>
@@ -150,7 +153,7 @@ function MiddlePanel() {
                       {dashData.friendsData.map((item, index) => {
                         return item?.amountToRecieve && item?.amountToRecieve > 0 ? (
                           <li class="relationship">
-                            <a href="#/friends/8376745">
+                            <a>
                               <img
                                 src="https://s3.amazonaws.com/splitwise/uploads/user/default_avatars/avatar-ruby30-100px.png"
                                 alt="Avatar"
@@ -172,7 +175,7 @@ function MiddlePanel() {
                       {dashData.friendsData.map((item, index) => {
                         return item?.amountToPay && item?.amountToPay > 0 ? (
                           <li class="relationship">
-                            <a href="#/friends/8376745">
+                            <a>
                               <img
                                 src="https://s3.amazonaws.com/splitwise/uploads/user/default_avatars/avatar-ruby30-100px.png"
                                 alt="Avatar"
