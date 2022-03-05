@@ -1,0 +1,1275 @@
+#add_bill,
+#settle_up_form {
+  font-size: 14px;
+  /* width: 350px; */
+  /* min-height: 480px; */
+  /* margin-left: 175px; */
+  overflow: visible;
+  background: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#add_bill .btn-cancel,
+#settle_up_form .btn-cancel {
+  background: #f6f6f6;
+  color: #333;
+  margin-right: 20px;
+}
+
+#add_bill .btn-cancel:hover,
+#settle_up_form .btn-cancel:hover {
+  background: #e9e9e9;
+  color: #333;
+}
+
+#add_bill .btn-mint,
+#settle_up_form .btn-mint {
+  background: #5cc5a7;
+  color: #fff;
+  text-shadow: 0 -1px 0px #318a71;
+}
+
+#add_bill .btn-mint:hover,
+#settle_up_form .btn-mint:hover {
+  background: #41b795;
+  color: #fff;
+}
+
+#add_bill .relative-container,
+#settle_up_form .relative-container {
+  position: relative;
+  min-height: 480px;
+}
+
+#add_bill #add_bill .subview,
+#settle_up_form #settle_up_form .subview {
+  background: #fff;
+  width: 350px;
+  border: 1px solid #999;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+#add_bill header,
+#add_bill .subview header,
+#settle_up_form header,
+#settle_up_form .subview header {
+  background: #5cc5a7;
+  color: #fff;
+  padding: 10px;
+  border-bottom: 1px solid #36977b;
+  text-shadow: 0 -1px 0 #318a71;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#add_bill header a.dismiss,
+#add_bill .subview header a.dismiss,
+#settle_up_form header a.dismiss,
+#settle_up_form .subview header a.dismiss {
+  float: right;
+  font-size: 28px;
+  margin-top: -3px;
+  color: #fff;
+  text-decoration: none;
+}
+
+#add_bill header a.dismiss:hover,
+#add_bill .subview header a.dismiss:hover,
+#settle_up_form header a.dismiss:hover,
+#settle_up_form .subview header a.dismiss:hover {
+  color: #cdede4;
+}
+
+#add_bill .with_field,
+#add_bill .subview .with_field,
+#settle_up_form .with_field,
+#settle_up_form .subview .with_field {
+  position: relative;
+  padding: 4px;
+  border-bottom: 1px solid #eee;
+  padding-left: 98px;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+#add_bill .with_field .with,
+#add_bill .subview .with_field .with,
+#settle_up_form .with_field .with,
+#settle_up_form .subview .with_field .with {
+  position: absolute;
+  left: 10px;
+  top: 11px;
+}
+
+#add_bill .with_field.group,
+#add_bill .subview .with_field.group,
+#settle_up_form .with_field.group,
+#settle_up_form .subview .with_field.group {
+  padding-left: 44px;
+}
+
+#add_bill .with_field ::-webkit-input-placeholder,
+#add_bill .subview .with_field ::-webkit-input-placeholder,
+#settle_up_form .with_field ::-webkit-input-placeholder,
+#settle_up_form .subview .with_field ::-webkit-input-placeholder {
+  color: #ddd;
+}
+
+#add_bill .body,
+#add_bill .subview .body,
+#settle_up_form .body,
+#settle_up_form .subview .body {
+  max-height: 435px;
+  position: relative;
+  padding: 10px;
+  text-align: center;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+#add_bill .body.inactive,
+#add_bill .subview .body.inactive,
+#settle_up_form .body.inactive,
+#settle_up_form .subview .body.inactive {
+  height: 0px;
+  max-height: 0px;
+  padding: 0 10px;
+  margin-bottom: -1px;
+}
+
+#add_bill .body .overlay,
+#add_bill .subview .body .overlay,
+#settle_up_form .body .overlay,
+#settle_up_form .subview .body .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  z-index: 1;
+}
+
+#add_bill .body .main_fields,
+#add_bill .subview .body .main_fields,
+#settle_up_form .body .main_fields,
+#settle_up_form .subview .body .main_fields {
+  position: relative;
+  width: 265px;
+  margin: 5px auto;
+  text-align: right;
+}
+
+#add_bill .body .main_fields img.category,
+#add_bill .subview .body .main_fields img.category,
+#settle_up_form .body .main_fields img.category,
+#settle_up_form .subview .body .main_fields img.category {
+  float: left;
+  width: 64px;
+  height: 64px;
+  margin: 10px 16px 10px 0;
+  border-radius: 4px;
+  cursor: pointer;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#add_bill .body .main_fields img.category:hover,
+#add_bill .subview .body .main_fields img.category:hover,
+#settle_up_form .body .main_fields img.category:hover,
+#settle_up_form .subview .body .main_fields img.category:hover {
+  opacity: 0.6;
+}
+
+#add_bill .body .main_fields div.cost_container,
+#add_bill .subview .body .main_fields div.cost_container,
+#settle_up_form .body .main_fields div.cost_container,
+#settle_up_form .subview .body .main_fields div.cost_container {
+  position: relative;
+  width: 181px;
+  text-align: left;
+  display: inline-block;
+  border-bottom: 1px dashed #ccc;
+  white-space: nowrap;
+}
+
+#add_bill .body .main_fields div.cost_container span.currency_code,
+#add_bill .subview .body .main_fields div.cost_container span.currency_code,
+#settle_up_form .body .main_fields div.cost_container span.currency_code,
+#settle_up_form
+  .subview
+  .body
+  .main_fields
+  div.cost_container
+  span.currency_code {
+  cursor: pointer;
+  font-size: 20px;
+  color: #333;
+  display: inline-block;
+  padding: 15px 3px 7px;
+  vertical-align: bottom;
+  text-decoration: none;
+}
+
+#add_bill .body .main_fields div.cost_container span.currency_code:hover,
+#add_bill
+  .subview
+  .body
+  .main_fields
+  div.cost_container
+  span.currency_code:hover,
+#settle_up_form .body .main_fields div.cost_container span.currency_code:hover,
+#settle_up_form
+  .subview
+  .body
+  .main_fields
+  div.cost_container
+  span.currency_code:hover {
+  color: #999;
+  background: #f9f9f9;
+}
+
+#add_bill .body .main_fields input,
+#add_bill .subview .body .main_fields input,
+#settle_up_form .body .main_fields input,
+#settle_up_form .subview .body .main_fields input {
+  outline: none;
+  border: none !important;
+  box-shadow: none !important;
+  text-align: left;
+  width: 177px;
+  color: #333;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  padding-bottom: 2px;
+}
+
+#add_bill .body .main_fields input.description,
+#add_bill .subview .body .main_fields input.description,
+#settle_up_form .body .main_fields input.description,
+#settle_up_form .subview .body .main_fields input.description {
+  font-size: 20px;
+  height: 24px;
+  line-height: 24px;
+  margin-top: 1px;
+  margin-bottom: 3px;
+  padding-left: 3px;
+  padding-right: 3px;
+  border-bottom: 1px dashed #ccc !important;
+}
+
+#add_bill .body .main_fields input.cost,
+#add_bill .subview .body .main_fields input.cost,
+#settle_up_form .body .main_fields input.cost,
+#settle_up_form .subview .body .main_fields input.cost {
+  font-size: 36px;
+  font-weight: bold;
+  height: 40px;
+  line-height: 40px;
+  width: 120px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  vertical-align: bottom;
+}
+
+#add_bill .body .main_fields input::-webkit-input-placeholder,
+#add_bill .body .main_fields input.placeholder,
+#add_bill .subview .body .main_fields input::-webkit-input-placeholder,
+#add_bill .subview .body .main_fields input.placeholder,
+#settle_up_form .body .main_fields input::-webkit-input-placeholder,
+#settle_up_form .body .main_fields input.placeholder,
+#settle_up_form .subview .body .main_fields input::-webkit-input-placeholder,
+#settle_up_form .subview .body .main_fields input.placeholder {
+  color: #ddd;
+}
+
+#add_bill .body .human_summary,
+#add_bill .subview .body .human_summary,
+#settle_up_form .body .human_summary,
+#settle_up_form .subview .body .human_summary {
+  clear: both;
+  margin: 15px 0 10px;
+  font-size: 14px;
+}
+
+#add_bill .body .human_summary a,
+#add_bill .subview .body .human_summary a,
+#settle_up_form .body .human_summary a,
+#settle_up_form .subview .body .human_summary a {
+  display: inline-block;
+  background: #f6f6f6;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  height: 18px;
+  line-height: 16px;
+  padding: 2px 5px 0;
+  border: 1px dashed #ccc;
+  vertical-align: middle;
+  color: #5cc5a7;
+  margin: 0px;
+  font-size: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#add_bill .body .human_summary a:hover,
+#add_bill .subview .body .human_summary a:hover,
+#settle_up_form .body .human_summary a:hover,
+#settle_up_form .subview .body .human_summary a:hover {
+  background: #eee;
+}
+
+#add_bill .body .human_summary a:active,
+#add_bill .subview .body .human_summary a:active,
+#settle_up_form .body .human_summary a:active,
+#settle_up_form .subview .body .human_summary a:active {
+  background: #e6e6e6;
+}
+
+#add_bill .body .human_summary span,
+#add_bill .subview .body .human_summary span,
+#settle_up_form .body .human_summary span,
+#settle_up_form .subview .body .human_summary span {
+  vertical-align: middle;
+}
+
+#add_bill .body .human_summary .details,
+#add_bill .subview .body .human_summary .details,
+#settle_up_form .body .human_summary .details,
+#settle_up_form .subview .body .human_summary .details {
+  margin: 3px 0;
+  font-size: 14px;
+}
+
+#add_bill .body .slim-button,
+#add_bill .subview .body .slim-button,
+#settle_up_form .body .slim-button,
+#settle_up_form .subview .body .slim-button {
+  display: inline-block;
+  background: #f6f6f6;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  height: 24px;
+  line-height: 24px;
+  width: 140px;
+  padding: 0 5px;
+  border: 1px solid #ccc;
+  color: #666;
+  margin: 5px;
+  font-size: 13px;
+  cursor: pointer;
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#add_bill .body .slim-button:hover,
+#add_bill .subview .body .slim-button:hover,
+#settle_up_form .body .slim-button:hover,
+#settle_up_form .subview .body .slim-button:hover {
+  background: #eee;
+}
+
+#add_bill .body .slim-button:active,
+#add_bill .subview .body .slim-button:active,
+#settle_up_form .body .slim-button:active,
+#settle_up_form .subview .body .slim-button:active {
+  background: #e6e6e6;
+}
+
+#add_bill .body .slim-button.selected,
+#add_bill .subview .body .slim-button.selected,
+#settle_up_form .body .slim-button.selected,
+#settle_up_form .subview .body .slim-button.selected {
+  background: #5cc5a7;
+  border: 1px solid #36977b;
+  color: #fff;
+  text-shadow: 0 -1px #389d80;
+}
+
+#add_bill .body .slim-button.selected:hover,
+#add_bill .subview .body .slim-button.selected:hover,
+#settle_up_form .body .slim-button.selected:hover,
+#settle_up_form .subview .body .slim-button.selected:hover {
+  background: #49be9d;
+}
+
+#add_bill .body .slim-button.selected:active,
+#add_bill .subview .body .slim-button.selected:active,
+#settle_up_form .body .slim-button.selected:active,
+#settle_up_form .subview .body .slim-button.selected:active {
+  background: #3eb08f;
+}
+
+#add_bill .body .slim-button.wide,
+#add_bill .subview .body .slim-button.wide,
+#settle_up_form .body .slim-button.wide,
+#settle_up_form .subview .body .slim-button.wide {
+  width: 240px;
+}
+
+#add_bill footer,
+#add_bill .subview footer,
+#settle_up_form footer,
+#settle_up_form .subview footer {
+  letter-spacing: 3px;
+  border-top: 1px solid #eee;
+  text-align: right;
+  padding: 8px 10px;
+}
+
+#add_bill footer a,
+#add_bill .subview footer a,
+#settle_up_form footer a,
+#settle_up_form .subview footer a {
+  letter-spacing: 0;
+  font-size: 14px;
+}
+
+#add_bill footer button,
+#add_bill .subview footer button,
+#settle_up_form footer button,
+#settle_up_form .subview footer button {
+  letter-spacing: 0;
+}
+
+#add_bill #settle_up_form {
+  position: relative;
+  z-index: 1;
+}
+
+#add_bill .subview,
+#settle_up_form .subview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  opacity: 0;
+  zoom: 1;
+  pointer-events: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#add_bill .subview.active,
+#settle_up_form .subview.active {
+  left: 370px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#add_bill .subview .body,
+#settle_up_form .subview .body {
+  overflow: auto;
+}
+
+#add_bill #choose_category li,
+#settle_up_form #choose_category li {
+  list-style: none;
+  width: 154px;
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+}
+
+#add_bill #choose_category .body,
+#settle_up_form #choose_category .body {
+  background: #eee;
+}
+
+#add_bill #choose_category .body > ul,
+#settle_up_form #choose_category .body > ul {
+  overflow: visible;
+  width: 175px;
+  text-align: left;
+  margin: -10px;
+}
+
+#add_bill #choose_category .body > ul > li,
+#settle_up_form #choose_category .body > ul > li {
+  display: block;
+  padding: 14px 10px 15px;
+  font-size: 14px;
+  border-right: 1px solid #bbb;
+}
+
+#add_bill #choose_category .body > ul > li i,
+#settle_up_form #choose_category .body > ul > li i {
+  float: right;
+}
+
+#add_bill #choose_category .body > ul > li > ul,
+#settle_up_form #choose_category .body > ul > li > ul {
+  display: none;
+  position: absolute;
+  margin: 0;
+  top: 0;
+  left: 175px;
+  width: 175px;
+  height: 100%;
+  background: #eee;
+}
+
+#add_bill #choose_category .body > ul > li > ul > li,
+#settle_up_form #choose_category .body > ul > li > ul > li {
+  width: 155px;
+  padding: 8px 10px 9px;
+  background: #eee;
+  font-weight: normal;
+}
+
+#add_bill #choose_category .body > ul > li > ul > li.selected,
+#settle_up_form #choose_category .body > ul > li > ul > li.selected {
+  background: #ddd;
+  border-bottom: 1px solid #ccc;
+  font-weight: bold;
+}
+
+#add_bill #choose_category .body > ul > li > ul > li:hover,
+#settle_up_form #choose_category .body > ul > li > ul > li:hover {
+  background: #ccc;
+  border-bottom: 1px solid #bbb;
+}
+
+#add_bill #choose_category .body > ul > li:hover,
+#add_bill #choose_category .body > ul > li.selected,
+#settle_up_form #choose_category .body > ul > li:hover,
+#settle_up_form #choose_category .body > ul > li.selected {
+  background: #ddd;
+  border-bottom: 1px solid #ccc;
+}
+
+#add_bill #choose_category .body > ul > li:hover > ul,
+#add_bill #choose_category .body > ul > li.selected > ul,
+#settle_up_form #choose_category .body > ul > li:hover > ul,
+#settle_up_form #choose_category .body > ul > li.selected > ul {
+  display: block;
+  z-index: 0;
+}
+
+#add_bill #choose_category .body > ul > li:hover,
+#settle_up_form #choose_category .body > ul > li:hover {
+  background: #ccc;
+  border-bottom: 1px solid #bbb;
+}
+
+#add_bill #choose_category .body > ul > li:hover > ul,
+#settle_up_form #choose_category .body > ul > li:hover > ul {
+  z-index: 1;
+}
+
+#add_bill #choose_category .body > ul > li.selected,
+#settle_up_form #choose_category .body > ul > li.selected {
+  font-weight: bold;
+}
+
+#add_bill #choose_currency,
+#add_bill #choose_group,
+#settle_up_form #choose_currency,
+#settle_up_form #choose_group {
+  width: 135px;
+}
+
+#add_bill #choose_currency ul,
+#add_bill #choose_group ul,
+#settle_up_form #choose_currency ul,
+#settle_up_form #choose_group ul {
+  margin: -10px;
+}
+
+#add_bill #choose_currency ul li,
+#add_bill #choose_group ul li,
+#settle_up_form #choose_currency ul li,
+#settle_up_form #choose_group ul li {
+  padding: 10px;
+  list-style: none;
+  cursor: pointer;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+#add_bill #choose_currency ul li:hover,
+#add_bill #choose_group ul li:hover,
+#settle_up_form #choose_currency ul li:hover,
+#settle_up_form #choose_group ul li:hover {
+  background: #ddd;
+}
+
+#add_bill #choose_currency ul li.selected,
+#add_bill #choose_group ul li.selected,
+#settle_up_form #choose_currency ul li.selected,
+#settle_up_form #choose_group ul li.selected {
+  font-weight: bold;
+  background: #eee;
+  border-bottom: 1px solid #ddd;
+}
+
+#add_bill #choose_group,
+#settle_up_form #choose_group {
+  width: 250px;
+}
+
+#add_bill #choose_date,
+#settle_up_form #choose_date {
+  width: 225px;
+  overflow: visible;
+}
+
+#add_bill #choose_date .body,
+#settle_up_form #choose_date .body {
+  padding: 3px 5px 5px;
+  overflow: visible;
+}
+
+#add_bill #choose_date .body .container-for-select,
+#settle_up_form #choose_date .body .container-for-select {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px 0;
+  text-align: left;
+}
+
+#add_bill #choose_date #datepicker,
+#settle_up_form #choose_date #datepicker {
+  position: relative;
+}
+
+#add_bill #choose_date #datepicker .datepicker,
+#settle_up_form #choose_date #datepicker .datepicker {
+  padding: 0;
+}
+
+#add_bill #choose_date #datepicker .datepicker span.active,
+#add_bill #choose_date #datepicker .datepicker td.active,
+#settle_up_form #choose_date #datepicker .datepicker span.active,
+#settle_up_form #choose_date #datepicker .datepicker td.active {
+  background: #5cc5a7;
+}
+
+#add_bill #choose_date #datepicker .datepicker::before,
+#add_bill #choose_date #datepicker .datepicker::after,
+#settle_up_form #choose_date #datepicker .datepicker::before,
+#settle_up_form #choose_date #datepicker .datepicker::after {
+  display: none;
+}
+
+#add_bill #choose_date #datepicker .dropdown-menu,
+#settle_up_form #choose_date #datepicker .dropdown-menu {
+  border: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  padding-bottom: 5px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+#add_bill #choose_date .recurring_options,
+#settle_up_form #choose_date .recurring_options {
+  clear: both;
+  border-top: 1px solid #ddd;
+  padding-top: 5px;
+}
+
+#add_bill #add_notes .body,
+#settle_up_form #add_notes .body {
+  text-align: left;
+  padding: 15px;
+}
+
+#add_bill #add_notes div.upload,
+#add_bill #add_notes div.memo,
+#settle_up_form #add_notes div.upload,
+#settle_up_form #add_notes div.memo {
+  margin: -15px -15px 15px;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+#add_bill #add_notes div.upload input[type="file"],
+#add_bill #add_notes div.memo input[type="file"],
+#settle_up_form #add_notes div.upload input[type="file"],
+#settle_up_form #add_notes div.memo input[type="file"] {
+  margin: 5px 0;
+  height: auto;
+  line-height: 1em;
+  width: auto;
+}
+
+#add_bill #add_notes textarea,
+#settle_up_form #add_notes textarea {
+  width: auto;
+  min-width: 270px;
+  margin: 0;
+  min-height: 140px;
+}
+
+#add_bill #choose_payer,
+#settle_up_form #choose_payer {
+  width: 300px;
+}
+
+#add_bill #choose_payer .body,
+#settle_up_form #choose_payer .body {
+  text-align: left;
+  padding: 0;
+}
+
+#add_bill #choose_payer .body > ul,
+#settle_up_form #choose_payer .body > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#add_bill #choose_payer .body > ul > li,
+#settle_up_form #choose_payer .body > ul > li {
+  cursor: pointer;
+  margin: 0;
+  padding: 10px 10px 9px;
+  border-bottom: 1px solid #eee;
+}
+
+#add_bill #choose_payer .body > ul > li img,
+#settle_up_form #choose_payer .body > ul > li img {
+  width: 22px;
+  height: 22px;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  margin-right: 2px;
+  margin-top: -2px;
+}
+
+#add_bill #choose_payer .body > ul > li:hover,
+#settle_up_form #choose_payer .body > ul > li:hover {
+  background: #ddd;
+}
+
+#add_bill #choose_payer .body > ul > li.selected,
+#settle_up_form #choose_payer .body > ul > li.selected {
+  background: #eee;
+  font-weight: bold;
+}
+
+#add_bill #choose_payer .body > ul > li ul,
+#settle_up_form #choose_payer .body > ul > li ul {
+  border-top: 1px solid #ddd;
+  cursor: auto;
+  font-weight: normal;
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+}
+
+#add_bill #choose_payer .body > ul > li ul li,
+#settle_up_form #choose_payer .body > ul > li ul li {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0 0;
+}
+
+#add_bill #choose_payer .body > ul > li ul li:first-child,
+#settle_up_form #choose_payer .body > ul > li ul li:first-child {
+  font-size: 12px;
+  color: #999;
+}
+
+#add_bill #choose_payer .body > ul > li ul li div.input-prepend,
+#settle_up_form #choose_payer .body > ul > li ul li div.input-prepend {
+  margin: 3px 0 1px;
+}
+
+#add_bill #choose_split,
+#settle_up_form #choose_split {
+  width: 350px;
+}
+
+#add_bill #choose_split.active.itemized_form.subview,
+#settle_up_form #choose_split.active.itemized_form.subview {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  left: 5px;
+  bottom: 5px;
+  width: auto;
+  min-width: 90%;
+  z-index: 1000000;
+  overflow: scroll;
+}
+
+#add_bill #choose_split.active.itemized_form.subview .body,
+#settle_up_form #choose_split.active.itemized_form.subview .body {
+  max-height: none;
+}
+
+#add_bill #choose_split.active.itemized_form.subview .btn-mint.dismiss,
+#settle_up_form #choose_split.active.itemized_form.subview .btn-mint.dismiss {
+  margin-top: 10px;
+}
+
+#add_bill #choose_split.active.itemized_form.subview .iou_buttons,
+#settle_up_form #choose_split.active.itemized_form.subview .iou_buttons {
+  display: none;
+}
+
+#add_bill #choose_split .body,
+#settle_up_form #choose_split .body {
+  text-align: left;
+}
+
+#add_bill #choose_split .split-details,
+#settle_up_form #choose_split .split-details {
+  padding: 10px;
+}
+
+#add_bill #choose_split .split-details #split_method,
+#settle_up_form #choose_split .split-details #split_method {
+  margin: -5px 0 10px;
+  text-align: center;
+  display: block;
+}
+
+#add_bill #choose_split .split-details #split_method .split_button,
+#settle_up_form #choose_split .split-details #split_method .split_button {
+  font-size: 24px;
+  line-height: 24px;
+  padding: 0 8px 4px;
+  height: 30px;
+}
+
+#add_bill #choose_split .split-details #split_method .split_button.unequal,
+#settle_up_form
+  #choose_split
+  .split-details
+  #split_method
+  .split_button.unequal {
+  font-size: 16px;
+  padding-top: 2px;
+}
+
+#add_bill #choose_split .split-details #split_method .split_button.percent,
+#add_bill #choose_split .split-details #split_method .split_button.adjustment,
+#settle_up_form
+  #choose_split
+  .split-details
+  #split_method
+  .split_button.percent,
+#settle_up_form
+  #choose_split
+  .split-details
+  #split_method
+  .split_button.adjustment {
+  padding-top: 2px;
+  font-size: 20px;
+}
+
+#add_bill #choose_split .split-details #split_method .split_button i,
+#settle_up_form #choose_split .split-details #split_method .split_button i {
+  font-size: 20px;
+  padding-top: 1px;
+}
+
+#add_bill #choose_split .split-details .split_method,
+#settle_up_form #choose_split .split-details .split_method {
+  display: none;
+}
+
+#add_bill #choose_split .split-details .split_method h3,
+#settle_up_form #choose_split .split-details .split_method h3 {
+  margin-bottom: 5px;
+}
+
+#add_bill #choose_split .split-details .split_method.equal,
+#add_bill #choose_split .split-details .split_method.reimbursement,
+#settle_up_form #choose_split .split-details .split_method.equal,
+#settle_up_form #choose_split .split-details .split_method.reimbursement {
+  display: block;
+}
+
+#add_bill #choose_split .split-details .split_method.equal .person,
+#add_bill #choose_split .split-details .split_method.reimbursement .person,
+#settle_up_form #choose_split .split-details .split_method.equal .person,
+#settle_up_form
+  #choose_split
+  .split-details
+  .split_method.reimbursement
+  .person {
+  cursor: pointer;
+}
+
+#add_bill #choose_split .split-details .split_method.equal .person:hover,
+#add_bill
+  #choose_split
+  .split-details
+  .split_method.reimbursement
+  .person:hover,
+#settle_up_form #choose_split .split-details .split_method.equal .person:hover,
+#settle_up_form
+  #choose_split
+  .split-details
+  .split_method.reimbursement
+  .person:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+#add_bill #choose_split .split-details .split_method.equal .person.nope,
+#add_bill #choose_split .split-details .split_method.reimbursement .person.nope,
+#settle_up_form #choose_split .split-details .split_method.equal .person.nope,
+#settle_up_form
+  #choose_split
+  .split-details
+  .split_method.reimbursement
+  .person.nope {
+  opacity: 0.3;
+}
+
+#add_bill #choose_split .split-details .split_method.equal .person.nope .name,
+#add_bill
+  #choose_split
+  .split-details
+  .split_method.equal
+  .person.nope
+  .subsummary,
+#add_bill
+  #choose_split
+  .split-details
+  .split_method.reimbursement
+  .person.nope
+  .name,
+#add_bill
+  #choose_split
+  .split-details
+  .split_method.reimbursement
+  .person.nope
+  .subsummary,
+#settle_up_form
+  #choose_split
+  .split-details
+  .split_method.equal
+  .person.nope
+  .name,
+#settle_up_form
+  #choose_split
+  .split-details
+  .split_method.equal
+  .person.nope
+  .subsummary,
+#settle_up_form
+  #choose_split
+  .split-details
+  .split_method.reimbursement
+  .person.nope
+  .name,
+#settle_up_form
+  #choose_split
+  .split-details
+  .split_method.reimbursement
+  .person.nope
+  .subsummary {
+  text-decoration: line-through;
+}
+
+#add_bill #choose_split .split-details .split_method .person,
+#settle_up_form #choose_split .split-details .split_method .person {
+  padding: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#add_bill #choose_split .split-details .split_method .person img,
+#settle_up_form #choose_split .split-details .split_method .person img {
+  margin-right: 5px;
+  width: 38px;
+  height: 38px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+
+#add_bill #choose_split .split-details .split_method .person .name,
+#settle_up_form #choose_split .split-details .split_method .person .name {
+  display: inline-block;
+  max-width: 170px;
+  overflow-x: hidden;
+  overflow-y: display;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: middle;
+  line-height: 16px;
+  min-height: 18px;
+}
+
+#add_bill #choose_split .split-details .split_method .person .subsummary,
+#settle_up_form #choose_split .split-details .split_method .person .subsummary {
+  display: inline-block;
+  color: #999;
+  font-size: 11px;
+}
+
+#add_bill
+  #choose_split
+  .split-details
+  .split_method
+  .person
+  input[type="checkbox"],
+#settle_up_form
+  #choose_split
+  .split-details
+  .split_method
+  .person
+  input[type="checkbox"] {
+  height: 20px;
+  width: 20px;
+  font-size: 20px;
+}
+
+#add_bill #choose_split .split-details .split_method .person .amount,
+#settle_up_form #choose_split .split-details .split_method .person .amount {
+  float: right;
+  margin-top: 8px;
+}
+
+#add_bill #choose_split .split-details .split_method .person div.input-prepend,
+#add_bill #choose_split .split-details .split_method .person div.input-append,
+#settle_up_form
+  #choose_split
+  .split-details
+  .split_method
+  .person
+  div.input-prepend,
+#settle_up_form
+  #choose_split
+  .split-details
+  .split_method
+  .person
+  div.input-append {
+  float: right;
+  margin-top: 4px;
+  margin-bottom: 2px;
+}
+
+#add_bill
+  #choose_split
+  .split-details
+  .split_method
+  .person
+  div.input-prepend
+  input,
+#add_bill
+  #choose_split
+  .split-details
+  .split_method
+  .person
+  div.input-append
+  input,
+#settle_up_form
+  #choose_split
+  .split-details
+  .split_method
+  .person
+  div.input-prepend
+  input,
+#settle_up_form
+  #choose_split
+  .split-details
+  .split_method
+  .person
+  div.input-append
+  input {
+  width: 45px;
+}
+
+#add_bill #choose_split .split-details .split_method.unequal .name,
+#add_bill #choose_split .split-details .split_method.percent .name,
+#settle_up_form #choose_split .split-details .split_method.unequal .name,
+#settle_up_form #choose_split .split-details .split_method.percent .name {
+  max-width: 145px;
+}
+
+#add_bill #choose_split .split-details .split_method.unequal .totals,
+#add_bill #choose_split .split-details .split_method.percent .totals,
+#settle_up_form #choose_split .split-details .split_method.unequal .totals,
+#settle_up_form #choose_split .split-details .split_method.percent .totals {
+  padding: 5px;
+  text-align: left;
+  font-size: 16px;
+  margin-top: 7px;
+}
+
+#add_bill #choose_split .split-details .split_method.unequal .totals .subtotals,
+#add_bill #choose_split .split-details .split_method.percent .totals .subtotals,
+#settle_up_form
+  #choose_split
+  .split-details
+  .split_method.unequal
+  .totals
+  .subtotals,
+#settle_up_form
+  #choose_split
+  .split-details
+  .split_method.percent
+  .totals
+  .subtotals {
+  float: right;
+  margin-top: -7px;
+  text-align: right;
+}
+
+#add_bill
+  #choose_split
+  .split-details
+  .split_method.unequal
+  .totals
+  .subtotals
+  .owed_total,
+#add_bill
+  #choose_split
+  .split-details
+  .split_method.percent
+  .totals
+  .subtotals
+  .owed_total,
+#settle_up_form
+  #choose_split
+  .split-details
+  .split_method.unequal
+  .totals
+  .subtotals
+  .owed_total,
+#settle_up_form
+  #choose_split
+  .split-details
+  .split_method.percent
+  .totals
+  .subtotals
+  .owed_total {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#add_bill
+  #choose_split
+  .split-details
+  .split_method.unequal
+  .totals
+  .subtotals
+  .remaining,
+#add_bill
+  #choose_split
+  .split-details
+  .split_method.percent
+  .totals
+  .subtotals
+  .remaining,
+#settle_up_form
+  #choose_split
+  .split-details
+  .split_method.unequal
+  .totals
+  .subtotals
+  .remaining,
+#settle_up_form
+  #choose_split
+  .split-details
+  .split_method.percent
+  .totals
+  .subtotals
+  .remaining {
+  font-size: 12px;
+  color: #aaa;
+}
+
+#add_bill .user-select-input-box {
+  border-bottom: 1px solid #eee;
+  padding: 4px;
+  max-height: 250px;
+  overflow-y: auto;
+  display: flex;
+  /* align-items: center; */
+  flex-wrap: wrap;
+}
+
+#add_bill .friends-list {
+  position: absolute;
+  width: 325px;
+  z-index: 999;
+  margin-top: -19px;
+}
+
+#add_bill .friends-list .select-dropdown {
+  background-color: #fff;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+  margin: 0;
+  min-width: 100px;
+  outline: 0;
+  position: relative;
+  transform: scaleY(0.8);
+  /* opacity: 0; */
+  transition: all 0.2s;
+  padding: 0;
+}
+
+#add_bill .friends-list .select-dropdown li {
+  padding: 15px;
+  font-size: 16px;
+  border-bottom: 1px solid #e1e1e1;
+  cursor: pointer;
+}
+
+#add_bill .selected-friends-details {
+  font-size: 14px;
+  line-height: 18px;
+  overflow: hidden;
+  height: 18px;
+  margin: 3px;
+  padding: 0 8px;
+  background: none;
+  background-color: #f6f6f6;
+  color: #000;
+  cursor: default;
+  border: 1px solid #bbb;
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  float: left;
+  list-style-type: none;
+  white-space: nowrap;
+  overflow: visible;
+  padding-right: 6px;
+}
+
+#add_bill .close-icon{
+  color: #aaa;
+  margin-left: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
